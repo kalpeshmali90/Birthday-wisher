@@ -39,7 +39,7 @@ def send_mail(file_name):
 
 
     for each in user_data:
-        fromaddr = "pythonexercise90@gmail.com"
+        fromaddr = "{your mail id}"
         to_add=each[2]
 
 
@@ -57,7 +57,7 @@ def send_mail(file_name):
 
         # string to store the body of the mail
         body = f"Hi {each[0]},\njust wanted to drop you a quick line to wish you a very happy birthday!\n" \
-               f"I hope you have a great day.\n-KALPESH MALI"
+               f"I hope you have a great day.\n-{your name}"
 
         # attach the body with the msg instance
         msg.attach(MIMEText(body, 'plain'))
@@ -91,7 +91,7 @@ def send_mail(file_name):
 
         # Authentication
 
-        s.login(fromaddr, os.getenv("password"))
+        s.login(fromaddr, os.getenv("password")) #store yoour password in environment variable named as password"
 
         # Converts the Multipart msg into a string
         text = msg.as_string()
