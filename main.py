@@ -19,7 +19,7 @@ def data(file_name):
     todays_date=(day,month)
     birthday_person_data=[]
 
-    print(date)
+    
     if is_file==True:
         with open(path,mode="r") as csv_file:
             data=pandas.read_csv(csv_file)
@@ -34,7 +34,7 @@ def data(file_name):
     return (birthday_person_data)
 
 def send_mail(file_name):
-    print("into mail send")
+   
     user_data=data(file_name)
 
 
